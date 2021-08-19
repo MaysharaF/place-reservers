@@ -2,6 +2,7 @@ import React from "react";
 import { View, Image, Text } from "react-native";
 
 import HomeImg from "../../assets/home.png";
+import ButtonAuth from "../../components/ButtonAuth";
 
 import { styles } from "./styles";
 
@@ -24,7 +25,13 @@ const Authentication: React.FC = () => {
         </Text>
       </View>
 
-      <View style={styles.footerAuth}></View>
+      <View style={styles.footerAuth}>
+        <ButtonAuth title="Login" />
+
+        <View style={styles.button}>
+          <Text style={styles.titleButton}>Registre-se</Text>
+        </View>
+      </View>
     </View>
   );
 };
