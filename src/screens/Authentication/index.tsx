@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Image, Text } from "react-native";
+
+import { View, Image, Text, Button } from "react-native";
 
 import HomeImg from "../../assets/home.png";
 import ButtonAuth from "../../components/ButtonAuth";
