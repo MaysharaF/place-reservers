@@ -48,4 +48,15 @@ export const styles = StyleSheet.create({
     width: "100%",
     height: "50%",
   },
+  footer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-evenly",
+    width: "100%",
+    height: "30%",
+  },
+  span: {
+    fontWeight: "bold",
+    color: theme.colors.purple_300,
+  },
 });

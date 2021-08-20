@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    width: 310,
+    width: 340,
     height: 55,
     backgroundColor: theme.colors.purple_300,
     borderRadius: 12,
