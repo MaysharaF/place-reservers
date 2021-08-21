@@ -1,6 +1,7 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 
-import { View, Image, Text, Button } from "react-native";
+import { View, Image, Text, TouchableOpacity } from "react-native";
 
 import HomeImg from "../../assets/home.png";
 import ButtonAuth from "../../components/ButtonAuth";
@@ -8,6 +9,12 @@ import ButtonAuth from "../../components/ButtonAuth";
 import { styles } from "./styles";
 
 const Authentication: React.FC = () => {
+  const navigation = useNavigation();
+
+  const handleSignup = () => {
+    navigation.navigate("Signup");
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
@@ -29,9 +36,11 @@ const Authentication: React.FC = () => {
       <View style={styles.footerAuth}>
         <ButtonAuth title="Login" />
 
-        <View style={styles.button}>
-          <Text style={styles.titleButton}>Registre-se</Text>
-        </View>
+        <TouchableOpacity onPress={handleSignup}>
+          <View style={styles.button}>
+            <Text style={styles.titleButton}>Registre-se</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
