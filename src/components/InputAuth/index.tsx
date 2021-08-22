@@ -7,9 +7,19 @@ interface IProps {
   title: string;
   placeholder: string;
   inputType: any;
+  handleState: (name: string, value: string) => void;
+  prop: string;
+  secureTextEntry?: boolean;
 }
 
-const InputAuth: React.FC<IProps> = ({ title, placeholder, inputType }) => {
+const InputAuth: React.FC<IProps> = ({
+  title,
+  placeholder,
+  inputType,
+  handleState,
+  prop,
+  secureTextEntry,
+}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{title}</Text>
@@ -17,6 +27,8 @@ const InputAuth: React.FC<IProps> = ({ title, placeholder, inputType }) => {
         style={styles.input}
         placeholder={placeholder}
         keyboardType={inputType}
+        onChangeText={(value) => handleState(prop, value)}
+        secureTextEntry={secureTextEntry}
       />
     </View>
   );
