@@ -1,26 +1,19 @@
 import React from "react";
-import { Text, View, TouchableOpacity } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { Text } from "react-native";
+
+import { RectButton, RectButtonProps } from "react-native-gesture-handler";
 
 import { styles } from "./styles";
 
-interface IProps {
+type IProps = RectButtonProps & {
   title: string;
-}
+};
 
-const ButtonAuth: React.FC<IProps> = ({ title }) => {
-  const navigation = useNavigation();
-
-  const handleLogin = () => {
-    navigation.navigate("Login");
-  };
-
+const ButtonAuth: React.FC<IProps> = ({ title, ...rest }) => {
   return (
-    <TouchableOpacity activeOpacity={0.9} onPress={handleLogin}>
-      <View style={styles.button}>
-        <Text style={styles.title}>{title}</Text>
-      </View>
-    </TouchableOpacity>
+    <RectButton style={styles.button} {...rest}>
+      <Text style={styles.title}>{title}</Text>
+    </RectButton>
   );
 };
 

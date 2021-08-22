@@ -11,6 +11,10 @@ import { styles } from "./styles";
 const Login: React.FC = () => {
   const navigation = useNavigation();
 
+  const handleDash = () => {
+    navigation.navigate("Dashboard");
+  };
+
   const handleSignup = () => {
     navigation.navigate("Signup");
   };
@@ -40,12 +44,11 @@ const Login: React.FC = () => {
           </View>
 
           <View style={styles.footer}>
-            <ButtonAuth title="Entrar" />
+            <ButtonAuth title="Entrar" onPress={handleDash} />
 
             <Text>
               Sou um novo usuário.
               <Text style={styles.span} onPress={handleSignup}>
-                {" "}
                 Cadastre-se
               </Text>
             </Text>

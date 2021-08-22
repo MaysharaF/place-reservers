@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
     height: 55,
     backgroundColor: theme.colors.purple_300,
     borderRadius: 12,
+    elevation: 3.5,
   },
   title: {
     fontSize: 20,

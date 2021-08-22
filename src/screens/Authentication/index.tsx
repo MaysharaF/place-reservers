@@ -11,6 +11,10 @@ import { styles } from "./styles";
 const Authentication: React.FC = () => {
   const navigation = useNavigation();
 
+  const handleLogin = () => {
+    navigation.navigate("Login");
+  };
+
   const handleSignup = () => {
     navigation.navigate("Signup");
   };
@@ -34,7 +38,7 @@ const Authentication: React.FC = () => {
       </View>
 
       <View style={styles.footerAuth}>
-        <ButtonAuth title="Login" />
+        <ButtonAuth title="Login" onPress={handleLogin} />
 
         <TouchableOpacity onPress={handleSignup}>
           <View style={styles.button}>

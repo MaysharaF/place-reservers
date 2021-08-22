@@ -50,6 +50,8 @@ export const styles = StyleSheet.create({
     width: "100%",
     borderTopRightRadius: 52,
     borderTopLeftRadius: 52,
+
+    elevation: 3.5,
   },
   button: {
     display: "flex",
@@ -61,6 +63,7 @@ export const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: theme.colors.purple_300,
     borderStyle: "solid",
+    elevation: 35,
   },
   titleButton: {
     fontSize: 20,
