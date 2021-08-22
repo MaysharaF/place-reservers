@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Icon } from "react-native-elements";
+import firebase from "../../config/firebase";
 
 import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
@@ -8,8 +9,16 @@ import { styles } from "./styles";
 const Header: React.FC = () => {
   const navigation = useNavigation();
 
-  const handleLogout = () => {
-    navigation.navigate("Login");
+  const handleLogout = () => {};
+
+  const logout = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        navigation.navigate("Login");
+      })
+      .catch((error) => {});
   };
 
   return (
@@ -25,7 +34,7 @@ const Header: React.FC = () => {
           <Text style={styles.title}>Dashboard</Text>
         </View>
 
-        <TouchableOpacity style={styles.buttonLogout} onPress={handleLogout}>
+        <TouchableOpacity style={styles.buttonLogout} onPress={logout}>
           <Icon
             name="logout"
             size={25}

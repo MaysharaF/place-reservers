@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "column",
     backgroundColor: theme.colors.white,
+    paddingTop: Platform.OS === "ios" ? 0 : 50,
   },
   imageContainer: {
     width: "100%",

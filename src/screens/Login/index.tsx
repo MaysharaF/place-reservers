@@ -48,7 +48,13 @@ const Login: React.FC = () => {
       });
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        navigation.navigate("Dashboard", { idUser: user?.uid });
+      }
+    });
+  }, []);
 
   return (
     <KeyboardAvoidingView
