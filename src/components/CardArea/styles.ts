@@ -3,7 +3,7 @@ import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
   container: {
-    width: "100%",
+    width: 340,
     height: 135,
     justifyContent: "space-between",
     backgroundColor: theme.colors.white,
@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     borderRadius: 20,
     padding: 10,
     elevation: 1,
+    alignSelf: "center",
   },
   infoArea: {
     width: "100%",

@@ -10,6 +10,8 @@ import ModalAlerta from "../../components/ModalAlerta";
 import ModalNovaReserva from "../../components/ModalNovaReserva";
 
 import { styles } from "./styles";
+import BotaoAdicionar from "../../components/BotaoAdicionar";
+import CardSuasReservas from "../../components/CardSuasReservas";
 
 const YourReservers: React.FC = () => {
   const [modalVisivel, setModalVisivel] = useState(false);
@@ -24,7 +26,7 @@ const YourReservers: React.FC = () => {
     <View style={styles.container}>
       <Cabecalho icone="list" titulo="Suas Reservas" />
 
-      <View style={styles.content}>
+      {/* <View style={styles.content}>
         <ScrollView>
           <Image source={EventImg} style={styles.image} />
           <Text style={styles.description}>
@@ -41,7 +43,22 @@ const YourReservers: React.FC = () => {
         <View style={styles.menu}>
           <BotaoNavegacao corLista={theme.colors.purple_300} />
         </View>
+      </View> */}
+
+      <View style={styles.contentList}>
+        <ScrollView>
+          <CardSuasReservas />
+          <CardSuasReservas />
+          <CardSuasReservas />
+          <CardSuasReservas />
+          <CardSuasReservas />
+        </ScrollView>
+        <View style={styles.menu}>
+          <BotaoNavegacao corLista={theme.colors.purple_300} />
+        </View>
       </View>
+
+      <BotaoAdicionar onPress={() => setModalVisivel(true)} />
 
       <ModalNovaReserva
         modalVisivel={modalVisivel}

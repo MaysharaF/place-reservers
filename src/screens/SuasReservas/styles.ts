@@ -17,6 +17,14 @@ export const styles = StyleSheet.create({
     borderTopLeftRadius: 25,
     position: "relative",
   },
+  contentList: {
+    height: "88%",
+    width: "100%",
+    backgroundColor: theme.colors.purple_100,
+    borderTopRightRadius: 25,
+    borderTopLeftRadius: 25,
+    position: "relative",
+  },
   menu: {
     height: "13%",
     width: "100%",

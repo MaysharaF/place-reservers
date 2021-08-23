@@ -4,7 +4,7 @@ import { theme } from "../../global/styles/theme";
 export const styles = StyleSheet.create({
   container: {
     width: 340,
-    height: 162,
+    height: 124,
     justifyContent: "space-between",
     backgroundColor: theme.colors.white,
     marginTop: 14,
@@ -16,24 +16,13 @@ export const styles = StyleSheet.create({
   nameArea: {
     fontSize: 14,
     fontWeight: "bold",
-    color: theme.colors.red_300,
-    backgroundColor: "#FED7D7",
+    color: "#3972E3",
+    backgroundColor: "#D7f1fe",
     borderRadius: 20,
     width: 136,
     height: 28,
     textAlign: "center",
     paddingTop: 4,
-  },
-  infoUser: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  nameUser: {
-    fontSize: 14,
-    color: "#747474",
-    fontWeight: "bold",
   },
   dateEvent: {
     fontSize: 14,
