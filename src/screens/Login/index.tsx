@@ -5,7 +5,6 @@ import {
   Image,
   KeyboardAvoidingView,
   Platform,
-  Alert,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import firebase from "../../config/firebase";
@@ -89,10 +88,7 @@ const Login: React.FC = () => {
           </View>
 
           <View style={styles.footer}>
-            <ButtonAuth
-              titulo="Entrar"
-              onPress={() => navigation.navigate("Dashboard")}
-            />
+            <ButtonAuth titulo="Entrar" onPress={loginFirebase} />
 
             <Text>
               Sou um novo usuário.

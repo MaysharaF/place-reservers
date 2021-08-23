@@ -1,6 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
-import { Modal, View } from "react-native";
-import { Icon } from "react-native-elements";
+import { Modal, View, ScrollView } from "react-native";
 
 import { styles } from "./styles";
 
@@ -15,11 +14,13 @@ const Modals: React.FC<IProps> = ({
   children,
 }) => {
   return (
-    <Modal animationType="slide" transparent={true} visible={modalVisivel}>
-      <View style={styles.centeredView}>
-        <View style={styles.modalView}>{children}</View>
-      </View>
-    </Modal>
+    <ScrollView>
+      <Modal animationType="slide" transparent={true} visible={modalVisivel}>
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>{children}</View>
+        </View>
+      </Modal>
+    </ScrollView>
   );
 };
 

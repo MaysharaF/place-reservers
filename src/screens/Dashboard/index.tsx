@@ -1,11 +1,13 @@
-import React, { useState } from "react";
-import { View, ScrollView, Text } from "react-native";
+import React, { useState, useEffect } from "react";
+import { View, ScrollView, FlatList } from "react-native";
+
 import BotaoNavegacao from "../../components/BotaoNavegacao";
 import BotaoAdicionar from "../../components/BotaoAdicionar";
 import CardArea from "../../components/CardArea";
 import Cabecalho from "../../components/Cabecalho";
 import ModalAddNovaArea from "../../components/ModalAddNovaArea";
 import ModalAlerta from "../../components/ModalAlerta";
+
 import { theme } from "../../global/styles/theme";
 
 import { styles } from "./styles";
@@ -25,26 +27,6 @@ const Dashboard: React.FC = () => {
 
       <View style={styles.content}>
         <ScrollView>
-          <CardArea
-            titulo="Salão de jogos"
-            descricao="Aberto todos os dias"
-            quantidade={10}
-          />
-          <CardArea
-            titulo="Salão de jogos"
-            descricao="Aberto todos os dias"
-            quantidade={10}
-          />
-          <CardArea
-            titulo="Salão de jogos"
-            descricao="Aberto todos os dias"
-            quantidade={10}
-          />
-          <CardArea
-            titulo="Salão de jogos"
-            descricao="Aberto todos os dias"
-            quantidade={10}
-          />
           <CardArea
             titulo="Salão de jogos"
             descricao="Aberto todos os dias"
