@@ -15,6 +15,9 @@ const Reservers: React.FC = () => {
       <View style={styles.content}>
         <ScrollView>
           <CardReservers />
+          <CardReservers />
+          <CardReservers />
+          <CardReservers />
         </ScrollView>
         <View style={styles.menu}>
           <BottomNavigation colorEvent={theme.colors.purple_300} />

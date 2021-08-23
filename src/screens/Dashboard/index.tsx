@@ -30,6 +30,26 @@ const Dashboard: React.FC = () => {
             descript="Aberto todos os dias"
             quantity={10}
           />
+          <CardArea
+            title="Salão de jogos"
+            descript="Aberto todos os dias"
+            quantity={10}
+          />
+          <CardArea
+            title="Salão de jogos"
+            descript="Aberto todos os dias"
+            quantity={10}
+          />
+          <CardArea
+            title="Salão de jogos"
+            descript="Aberto todos os dias"
+            quantity={10}
+          />
+          <CardArea
+            title="Salão de jogos"
+            descript="Aberto todos os dias"
+            quantity={10}
+          />
         </ScrollView>
         <View style={styles.menu}>
           <BottomNavigation colorDash={theme.colors.purple_300} />

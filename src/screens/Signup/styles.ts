@@ -14,8 +14,10 @@ export const styles = StyleSheet.create({
     height: "25%",
   },
   image: {
-    width: "100%",
-    height: "100%",
+    width: 320,
+    height: 210,
+    alignSelf: "center",
+    justifyContent: "center",
   },
   formContainer: {
     width: "100%",

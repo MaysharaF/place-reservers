@@ -6,7 +6,7 @@ import Login from "../screens/Login";
 import Signup from "../screens/Signup";
 import Dashboard from "../screens/Dashboard";
 import Reservers from "../screens/Reservers";
-import YouReservers from "../screens/YouReservers";
+import YourReservers from "../screens/YourReservers";
 
 const { Navigator, Screen } = createStackNavigator();
 
@@ -26,7 +26,7 @@ const AuthRoutes: React.FC = () => {
       <Screen name="Signup" component={Signup} />
       <Screen name="Dashboard" component={Dashboard} />
       <Screen name="Reservers" component={Reservers} />
-      <Screen name="YouReservers" component={YouReservers} />
+      <Screen name="YourReservers" component={YourReservers} />
     </Navigator>
   );
 };
