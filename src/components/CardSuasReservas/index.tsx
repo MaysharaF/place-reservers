@@ -5,10 +5,20 @@ import { Icon } from "react-native-elements";
 
 import { styles } from "./styles";
 
-const CardSuasReservas: React.FC = () => {
+interface IProp {
+  nome: string;
+  data_reserva: string;
+  qtd_pessoa: number;
+}
+
+const CardSuasReservas: React.FC<IProp> = ({
+  nome,
+  data_reserva,
+  qtd_pessoa,
+}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.nameArea}>Espaço Pet</Text>
+      <Text style={styles.nameArea}>{nome}</Text>
       <Text style={styles.dateEvent}>
         <Icon
           name="watch"
@@ -16,7 +26,7 @@ const CardSuasReservas: React.FC = () => {
           color={theme.colors.gray_200}
           style={{ marginRight: 5 }}
         />
-        24 de Junho de 2021 - 14:00 às 16:30
+        {data_reserva}
       </Text>
       <Text style={styles.dateEvent}>
         <Icon
@@ -25,7 +35,7 @@ const CardSuasReservas: React.FC = () => {
           color={theme.colors.gray_200}
           style={{ marginRight: 5 }}
         />
-        5 pessoas
+        {qtd_pessoa}
       </Text>
       <Text style={styles.statusEvent}>EM ABERTO</Text>
     </View>
