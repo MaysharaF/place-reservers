@@ -11,7 +11,7 @@ interface IProps {
   icone: string;
 }
 
-const Header: React.FC<IProps> = ({ titulo, icone }) => {
+const Cabecalho: React.FC<IProps> = ({ titulo, icone }) => {
   const navigation = useNavigation();
 
   const logout = () => {
@@ -51,4 +51,4 @@ const Header: React.FC<IProps> = ({ titulo, icone }) => {
   );
 };
 
-export default Header;
+export default Cabecalho;

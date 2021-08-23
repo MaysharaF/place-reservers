@@ -3,7 +3,7 @@ import { View, ScrollView, Text } from "react-native";
 import BotaoNavegacao from "../../components/BotaoNavegacao";
 import BotaoAdicionar from "../../components/BotaoAdicionar";
 import CardArea from "../../components/CardArea";
-import Header from "../../components/Header";
+import Cabecalho from "../../components/Cabecalho";
 import ModalAddNovaArea from "../../components/ModalAddNovaArea";
 import ModalAlerta from "../../components/ModalAlerta";
 import { theme } from "../../global/styles/theme";
@@ -21,7 +21,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Header icone="dashboard" titulo="Dashboard" />
+      <Cabecalho icone="dashboard" titulo="Dashboard" />
 
       <View style={styles.content}>
         <ScrollView>

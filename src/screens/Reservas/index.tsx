@@ -2,7 +2,7 @@ import React from "react";
 import { View, ScrollView } from "react-native";
 import BotaoNavegacao from "../../components/BotaoNavegacao";
 import CardReservas from "../../components/CardReservas";
-import Header from "../../components/Header";
+import Cabecalho from "../../components/Cabecalho";
 import { theme } from "../../global/styles/theme";
 
 import { styles } from "./styles";
@@ -10,7 +10,7 @@ import { styles } from "./styles";
 const Reservas: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Header icone="event" titulo="Reservas" />
+      <Cabecalho icone="event" titulo="Reservas" />
 
       <View style={styles.content}>
         <ScrollView>

@@ -5,14 +5,14 @@ import { theme } from "../../global/styles/theme";
 import BotaoNavegacao from "../../components/BotaoNavegacao";
 
 import EventImg from "../../assets/calendar.png";
-import Header from "../../components/Header";
+import Cabecalho from "../../components/Cabecalho";
 
 import { styles } from "./styles";
 
 const YourReservers: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Header icone="list" titulo="Suas Reservas" />
+      <Cabecalho icone="list" titulo="Suas Reservas" />
 
       <View style={styles.content}>
         <ScrollView>
