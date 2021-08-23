@@ -8,15 +8,15 @@ import ButtonAuth from "../../components/ButtonAuth";
 
 import { styles } from "./styles";
 
-const Authentication: React.FC = () => {
+const Autenticacao: React.FC = () => {
   const navigation = useNavigation();
 
-  const handleLogin = () => {
+  const login = () => {
     navigation.navigate("Login");
   };
 
-  const handleSignup = () => {
-    navigation.navigate("Signup");
+  const cadastrar = () => {
+    navigation.navigate("Cadastrar");
   };
 
   return (
@@ -38,9 +38,9 @@ const Authentication: React.FC = () => {
       </View>
 
       <View style={styles.footerAuth}>
-        <ButtonAuth title="Login" onPress={handleLogin} />
+        <ButtonAuth titulo="Login" onPress={login} />
 
-        <TouchableOpacity onPress={handleSignup}>
+        <TouchableOpacity onPress={cadastrar}>
           <View style={styles.button}>
             <Text style={styles.titleButton}>Registre-se</Text>
           </View>
@@ -50,4 +50,4 @@ const Authentication: React.FC = () => {
   );
 };
 
-export default Authentication;
+export default Autenticacao;

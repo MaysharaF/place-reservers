@@ -12,7 +12,7 @@ import { styles } from "./styles";
 const YourReservers: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Header icon="list" title="Suas Reservas" />
+      <Header icone="list" titulo="Suas Reservas" />
 
       <View style={styles.content}>
         <ScrollView>
@@ -26,7 +26,7 @@ const YourReservers: React.FC = () => {
           </TouchableOpacity>
         </ScrollView>
         <View style={styles.menu}>
-          <BotaoNavegacao colorList={theme.colors.purple_300} />
+          <BotaoNavegacao corLista={theme.colors.purple_300} />
         </View>
       </View>
     </View>

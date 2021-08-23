@@ -6,18 +6,18 @@ import Modals from "../Modals";
 import { styles } from "./styles";
 
 interface IProps {
-  modalVisible: boolean;
-  setModalVisible: Dispatch<SetStateAction<boolean>>;
-  save: () => void;
+  modalVisivel: boolean;
+  setModalVisivel: Dispatch<SetStateAction<boolean>>;
+  salvar: () => void;
 }
 
 const ModalAddNovaArea: React.FC<IProps> = ({
-  modalVisible,
-  setModalVisible,
-  save,
+  modalVisivel,
+  setModalVisivel,
+  salvar,
 }) => {
   return (
-    <Modals setModalVisible={setModalVisible} modalVisible={modalVisible}>
+    <Modals setModalVisivel={setModalVisivel} modalVisivel={modalVisivel}>
       <View style={styles.form}>
         <View style={styles.inputBox}>
           <Text style={styles.title}>Nome do ambiente</Text>
@@ -48,7 +48,7 @@ const ModalAddNovaArea: React.FC<IProps> = ({
       </View>
 
       <View style={styles.saveContet}>
-        <TouchableOpacity style={styles.buttonSave} onPress={() => save()}>
+        <TouchableOpacity style={styles.buttonSave} onPress={() => salvar()}>
           <Text style={styles.titleSave}>Salvar</Text>
         </TouchableOpacity>
       </View>

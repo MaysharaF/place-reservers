@@ -8,16 +8,12 @@ import { styles } from "./styles";
 import { theme } from "../../global/styles/theme";
 
 interface IProps {
-  colorDash?: any;
-  colorEvent?: any;
-  colorList?: any;
+  corDash?: any;
+  corEvento?: any;
+  corLista?: any;
 }
 
-const BotaoNavegacao: React.FC<IProps> = ({
-  colorDash,
-  colorEvent,
-  colorList,
-}) => {
+const BotaoNavegacao: React.FC<IProps> = ({ corDash, corEvento, corLista }) => {
   const navigation = useNavigation();
 
   return (
@@ -27,20 +23,20 @@ const BotaoNavegacao: React.FC<IProps> = ({
           <Icon
             name="dashboard"
             size={35}
-            color={colorDash || theme.colors.gray_200}
+            color={corDash || theme.colors.gray_200}
             onPress={() => navigation.navigate("Dashboard")}
           />
           <Icon
             name="event"
             size={35}
-            color={colorEvent || theme.colors.gray_200}
-            onPress={() => navigation.navigate("Reservers")}
+            color={corEvento || theme.colors.gray_200}
+            onPress={() => navigation.navigate("Reservas")}
           />
           <Icon
             name="list"
             size={35}
-            color={colorList || theme.colors.gray_200}
-            onPress={() => navigation.navigate("YourReservers")}
+            color={corLista || theme.colors.gray_200}
+            onPress={() => navigation.navigate("SuasReservas")}
           />
         </View>
       </View>

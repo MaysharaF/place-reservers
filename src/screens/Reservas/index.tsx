@@ -7,10 +7,10 @@ import { theme } from "../../global/styles/theme";
 
 import { styles } from "./styles";
 
-const Reservers: React.FC = () => {
+const Reservas: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Header icon="event" title="Reservas" />
+      <Header icone="event" titulo="Reservas" />
 
       <View style={styles.content}>
         <ScrollView>
@@ -20,11 +20,11 @@ const Reservers: React.FC = () => {
           <CardReservas />
         </ScrollView>
         <View style={styles.menu}>
-          <BotaoNavegacao colorEvent={theme.colors.purple_300} />
+          <BotaoNavegacao corEvento={theme.colors.purple_300} />
         </View>
       </View>
     </View>
   );
 };
 
-export default Reservers;
+export default Reservas;

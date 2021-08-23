@@ -5,21 +5,21 @@ import { Icon } from "react-native-elements";
 import { styles } from "./styles";
 
 interface IProps {
-  title: string;
-  descript: string;
-  quantity: number;
+  titulo: string;
+  descricao: string;
+  quantidade: number;
 }
 
-const CardArea: React.FC<IProps> = ({ title, descript, quantity }) => {
+const CardArea: React.FC<IProps> = ({ titulo, descricao, quantidade }) => {
   return (
     <View style={styles.container}>
       <View style={styles.infoArea}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.description}>{descript}</Text>
+        <Text style={styles.title}>{titulo}</Text>
+        <Text style={styles.description}>{descricao}</Text>
       </View>
 
       <View style={styles.actionContent}>
-        <Text style={styles.quantity}>Max: {quantity}</Text>
+        <Text style={styles.quantity}>Max: {quantidade}</Text>
         <View style={styles.actions}>
           <Icon
             name="edit"

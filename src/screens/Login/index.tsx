@@ -17,41 +17,41 @@ import InputAuth from "../../components/InputAuth";
 import { styles } from "./styles";
 
 const Login: React.FC = () => {
-  const [errorLogin, setErrorLogin] = useState<boolean>(false);
-  const [loginForm, setLoginForm] = useState({ email: "", password: "" });
+  const [erroLogin, setErroLogin] = useState<boolean>(false);
+  const [loginForm, setLoginForm] = useState({ email: "", senha: "" });
 
-  const handleState = (name: string, value: string) => {
+  const lidandoComEstado = (nome: string, valor: string) => {
     setLoginForm((oldValue) => ({
       ...oldValue,
-      [name]: value,
+      [nome]: valor,
     }));
   };
 
   const navigation = useNavigation();
 
-  const handleSignup = () => {
-    navigation.navigate("Signup");
+  const cadastrar = () => {
+    navigation.navigate("Cadastrar");
   };
 
   const loginFirebase = () => {
     firebase
       .auth()
-      .signInWithEmailAndPassword(loginForm.email, loginForm.password)
+      .signInWithEmailAndPassword(loginForm.email, loginForm.senha)
       .then((userCredential) => {
-        let user = userCredential.user;
-        navigation.navigate("Dashboard", { idUser: user?.uid });
+        let usuario = userCredential.user;
+        navigation.navigate("Dashboard", { idUser: usuario?.uid });
       })
       .catch((error) => {
-        setErrorLogin(true);
+        setErroLogin(true);
         var errorCode = error.code;
         var errorMessage = error.message;
       });
   };
 
   useEffect(() => {
-    firebase.auth().onAuthStateChanged(function (user) {
-      if (user) {
-        navigation.navigate("Dashboard", { idUser: user?.uid });
+    firebase.auth().onAuthStateChanged(function (usuario) {
+      if (usuario) {
+        navigation.navigate("Dashboard", { idUser: usuario?.uid });
       }
     });
   }, []);
@@ -72,31 +72,31 @@ const Login: React.FC = () => {
           </View>
           <View style={styles.form}>
             <InputAuth
-              title="E-mail"
+              titulo="E-mail"
               placeholder="Digite seu e-mail"
               inputType="default"
-              handleState={handleState}
+              lidandoComEstado={lidandoComEstado}
               prop="email"
             />
             <InputAuth
-              title="Senha"
+              titulo="Senha"
               secureTextEntry={true}
               placeholder="Digite sua senha"
               inputType="default"
-              handleState={handleState}
-              prop="password"
+              lidandoComEstado={lidandoComEstado}
+              prop="senha"
             />
           </View>
 
           <View style={styles.footer}>
             <ButtonAuth
-              title="Entrar"
+              titulo="Entrar"
               onPress={() => navigation.navigate("Dashboard")}
             />
 
             <Text>
               Sou um novo usuário.
-              <Text style={styles.span} onPress={handleSignup}>
+              <Text style={styles.span} onPress={cadastrar}>
                 Cadastre-se
               </Text>
             </Text>

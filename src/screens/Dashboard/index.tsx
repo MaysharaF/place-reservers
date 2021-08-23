@@ -11,60 +11,60 @@ import { theme } from "../../global/styles/theme";
 import { styles } from "./styles";
 
 const Dashboard: React.FC = () => {
-  const [modalVisible, setModalVisible] = useState(false);
-  const [modalAlert, setModalAlert] = useState(false);
+  const [modalVisivel, setModalVisivel] = useState(false);
+  const [modalAlerta, setModalAlerta] = useState(false);
 
-  const saveModal = () => {
-    setModalAlert(true);
-    setModalVisible(false);
+  const modalDeSalvar = () => {
+    setModalAlerta(true);
+    setModalVisivel(false);
   };
 
   return (
     <View style={styles.container}>
-      <Header icon="dashboard" title="Dashboard" />
+      <Header icone="dashboard" titulo="Dashboard" />
 
       <View style={styles.content}>
         <ScrollView>
           <CardArea
-            title="Salão de jogos"
-            descript="Aberto todos os dias"
-            quantity={10}
+            titulo="Salão de jogos"
+            descricao="Aberto todos os dias"
+            quantidade={10}
           />
           <CardArea
-            title="Salão de jogos"
-            descript="Aberto todos os dias"
-            quantity={10}
+            titulo="Salão de jogos"
+            descricao="Aberto todos os dias"
+            quantidade={10}
           />
           <CardArea
-            title="Salão de jogos"
-            descript="Aberto todos os dias"
-            quantity={10}
+            titulo="Salão de jogos"
+            descricao="Aberto todos os dias"
+            quantidade={10}
           />
           <CardArea
-            title="Salão de jogos"
-            descript="Aberto todos os dias"
-            quantity={10}
+            titulo="Salão de jogos"
+            descricao="Aberto todos os dias"
+            quantidade={10}
           />
           <CardArea
-            title="Salão de jogos"
-            descript="Aberto todos os dias"
-            quantity={10}
+            titulo="Salão de jogos"
+            descricao="Aberto todos os dias"
+            quantidade={10}
           />
         </ScrollView>
         <View style={styles.menu}>
-          <BotaoNavegacao colorDash={theme.colors.purple_300} />
+          <BotaoNavegacao corDash={theme.colors.purple_300} />
         </View>
       </View>
 
-      <BotaoAdicionar onPress={() => setModalVisible(true)} />
+      <BotaoAdicionar onPress={() => setModalVisivel(true)} />
 
       <ModalAddNovaArea
-        modalVisible={modalVisible}
-        setModalVisible={setModalVisible}
-        save={saveModal}
+        modalVisivel={modalVisivel}
+        setModalVisivel={setModalVisivel}
+        salvar={modalDeSalvar}
       />
 
-      <ModalAlerta modalAlert={modalAlert} setModalAlert={setModalAlert} />
+      <ModalAlerta modalAlerta={modalAlerta} setModalAlerta={setModalAlerta} />
     </View>
   );
 };

@@ -5,17 +5,17 @@ import { Icon } from "react-native-elements";
 import { styles } from "./styles";
 
 interface IProps {
-  modalVisible: boolean;
-  setModalVisible: Dispatch<SetStateAction<boolean>>;
+  modalVisivel: boolean;
+  setModalVisivel: Dispatch<SetStateAction<boolean>>;
 }
 
 const Modals: React.FC<IProps> = ({
-  modalVisible,
-  setModalVisible,
+  modalVisivel,
+  setModalVisivel,
   children,
 }) => {
   return (
-    <Modal animationType="slide" transparent={true} visible={modalVisible}>
+    <Modal animationType="slide" transparent={true} visible={modalVisivel}>
       <View style={styles.centeredView}>
         <View style={styles.modalView}>{children}</View>
       </View>

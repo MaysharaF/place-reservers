@@ -9,13 +9,13 @@ import warningImg from "../../assets/warning.png";
 import { styles } from "./styles";
 
 interface IProps {
-  modalAlert: boolean;
-  setModalAlert: Dispatch<SetStateAction<boolean>>;
+  modalAlerta: boolean;
+  setModalAlerta: Dispatch<SetStateAction<boolean>>;
 }
 
-const ModalAlerta: React.FC<IProps> = ({ modalAlert, setModalAlert }) => {
+const ModalAlerta: React.FC<IProps> = ({ modalAlerta, setModalAlerta }) => {
   return (
-    <Modals modalVisible={modalAlert} setModalVisible={setModalAlert}>
+    <Modals modalVisivel={modalAlerta} setModalVisivel={setModalAlerta}>
       <View style={styles.container}>
         <Image source={successImg} style={styles.image} />
         <Text style={styles.description}>Cadastro salvo com sucesso!</Text>

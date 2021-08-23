@@ -6,13 +6,13 @@ import { RectButton, RectButtonProps } from "react-native-gesture-handler";
 import { styles } from "./styles";
 
 type IProps = RectButtonProps & {
-  title: string;
+  titulo: string;
 };
 
-const ButtonAuth: React.FC<IProps> = ({ title, ...rest }) => {
+const ButtonAuth: React.FC<IProps> = ({ titulo, ...rest }) => {
   return (
     <RectButton style={styles.button} {...rest}>
-      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.title}>{titulo}</Text>
     </RectButton>
   );
 };

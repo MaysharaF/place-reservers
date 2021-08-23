@@ -7,11 +7,11 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 
 interface IProps {
-  title: string;
-  icon: string;
+  titulo: string;
+  icone: string;
 }
 
-const Header: React.FC<IProps> = ({ icon, title }) => {
+const Header: React.FC<IProps> = ({ titulo, icone }) => {
   const navigation = useNavigation();
 
   const logout = () => {
@@ -29,12 +29,12 @@ const Header: React.FC<IProps> = ({ icon, title }) => {
       <View style={styles.content}>
         <View style={styles.titleContent}>
           <Icon
-            name={icon}
+            name={titulo}
             size={25}
             color="#322F3B"
             style={{ marginRight: 5 }}
           />
-          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.title}>{icone}</Text>
         </View>
 
         <TouchableOpacity style={styles.buttonLogout} onPress={logout}>

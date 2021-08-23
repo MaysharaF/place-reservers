@@ -9,37 +9,37 @@ import InputAuth from "../../components/InputAuth";
 
 import { styles } from "./styles";
 
-const Signup: React.FC = () => {
-  const [errorSignup, setErrorSignup] = useState<boolean>(false);
-  const [formSignup, setFormSignup] = useState({
-    name: "",
-    numberapt: "",
+const Cadastrar: React.FC = () => {
+  const [erroCadastro, setErroCadastro] = useState<boolean>(false);
+  const [formCadastro, setFormCadastro] = useState({
+    nome: "",
+    num_apt: "",
     email: "",
-    password: "",
+    senha: "",
   });
   const navigation = useNavigation();
 
-  const handleLogin = () => {
+  const login = () => {
     navigation.navigate("Login");
   };
 
-  const handleState = (name: string, value: string) => {
-    setFormSignup((oldValue) => ({
+  const lidandoComEstado = (nome: string, valor: string) => {
+    setFormCadastro((oldValue) => ({
       ...oldValue,
-      [name]: value,
+      [nome]: valor,
     }));
   };
 
-  const register = () => {
+  const registrar = () => {
     firebase
       .auth()
-      .createUserWithEmailAndPassword(formSignup.email, formSignup.password)
+      .createUserWithEmailAndPassword(formCadastro.email, formCadastro.senha)
       .then((userCredential) => {
-        let user = userCredential.user;
-        navigation.navigate("Dashboard", { idUser: user?.uid });
+        let usuario = userCredential.user;
+        navigation.navigate("Dashboard", { idUser: usuario?.uid });
       })
       .catch((error) => {
-        setErrorSignup(true);
+        setErroCadastro(true);
         var errorCode = error.code;
         var errorMessage = error.message;
       });
@@ -58,41 +58,41 @@ const Signup: React.FC = () => {
           </View>
           <View style={styles.form}>
             <InputAuth
-              title="Nome completo"
+              titulo="Nome completo"
               placeholder="Digite seu nome completo"
               inputType="default"
-              handleState={handleState}
-              prop="name"
+              lidandoComEstado={lidandoComEstado}
+              prop="nome"
             />
             <InputAuth
-              title="Número de apartamento"
+              titulo="Número de apartamento"
               placeholder="Digite o número do seu apartamento"
               inputType="default"
-              handleState={handleState}
-              prop="numberapt"
+              lidandoComEstado={lidandoComEstado}
+              prop="num_apt"
             />
             <InputAuth
-              title="E-mail"
+              titulo="E-mail"
               placeholder="Digite seu e-mail"
               inputType="default"
-              handleState={handleState}
+              lidandoComEstado={lidandoComEstado}
               prop="email"
             />
             <InputAuth
-              title="Senha"
+              titulo="Senha"
               placeholder="Digite sua senha"
               inputType="default"
-              handleState={handleState}
-              prop="password"
+              lidandoComEstado={lidandoComEstado}
+              prop="senha"
             />
           </View>
 
           <View style={styles.footer}>
-            <ButtonAuth title="Cadastre-se" onPress={register} />
+            <ButtonAuth titulo="Cadastre-se" onPress={registrar} />
 
             <Text>
               Já sou um membro.
-              <Text style={styles.span} onPress={handleLogin}>
+              <Text style={styles.span} onPress={login}>
                 {" "}
                 Entrar
               </Text>
@@ -104,4 +104,4 @@ const Signup: React.FC = () => {
   );
 };
 
-export default Signup;
+export default Cadastrar;
