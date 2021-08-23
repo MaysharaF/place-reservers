@@ -8,7 +8,7 @@ import { styles } from "./styles";
 import { theme } from "../../global/styles/theme";
 
 interface IProps {
-  colorDash: any;
+  colorDash?: any;
   colorEvent?: any;
   colorList?: any;
 }

@@ -21,7 +21,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Header />
+      <Header icon="dashboard" title="Dashboard" />
 
       <View style={styles.content}>
         <ScrollView>

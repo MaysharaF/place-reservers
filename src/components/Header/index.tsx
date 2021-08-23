@@ -6,7 +6,12 @@ import firebase from "../../config/firebase";
 import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 
-const Header: React.FC = () => {
+interface IProps {
+  title: string;
+  icon: string;
+}
+
+const Header: React.FC<IProps> = ({ icon, title }) => {
   const navigation = useNavigation();
 
   const logout = () => {
@@ -24,12 +29,12 @@ const Header: React.FC = () => {
       <View style={styles.content}>
         <View style={styles.titleContent}>
           <Icon
-            name="dashboard"
+            name={icon}
             size={25}
             color="#322F3B"
             style={{ marginRight: 5 }}
           />
-          <Text style={styles.title}>Dashboard</Text>
+          <Text style={styles.title}>{title}</Text>
         </View>
 
         <TouchableOpacity style={styles.buttonLogout} onPress={logout}>
