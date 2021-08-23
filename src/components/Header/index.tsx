@@ -29,12 +29,12 @@ const Header: React.FC<IProps> = ({ titulo, icone }) => {
       <View style={styles.content}>
         <View style={styles.titleContent}>
           <Icon
-            name={titulo}
+            name={icone}
             size={25}
             color="#322F3B"
             style={{ marginRight: 5 }}
           />
-          <Text style={styles.title}>{icone}</Text>
+          <Text style={styles.title}>{titulo}</Text>
         </View>
 
         <TouchableOpacity style={styles.buttonLogout} onPress={logout}>
