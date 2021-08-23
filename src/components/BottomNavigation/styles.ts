@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 15,
     height: "100%",
-    elevation: 20,
+    elevation: 24,
   },
   content: {
     height: "100%",

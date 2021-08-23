@@ -40,6 +40,7 @@ const BottomNavigation: React.FC<IProps> = ({
             name="list"
             size={35}
             color={colorList || theme.colors.gray_200}
+            onPress={() => navigation.navigate("YouReservers")}
           />
         </View>
       </View>
