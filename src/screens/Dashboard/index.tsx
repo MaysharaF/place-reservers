@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, ScrollView, Text } from "react-native";
-import BottomNavigation from "../../components/BottomNavigation";
+import BotaoNavegacao from "../../components/BotaoNavegacao";
 import ButtonAdd from "../../components/ButtonAdd";
 import CardArea from "../../components/CardArea";
 import Header from "../../components/Header";
@@ -52,7 +52,7 @@ const Dashboard: React.FC = () => {
           />
         </ScrollView>
         <View style={styles.menu}>
-          <BottomNavigation colorDash={theme.colors.purple_300} />
+          <BotaoNavegacao colorDash={theme.colors.purple_300} />
         </View>
       </View>
 

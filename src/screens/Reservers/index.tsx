@@ -1,6 +1,6 @@
 import React from "react";
 import { View, ScrollView } from "react-native";
-import BottomNavigation from "../../components/BottomNavigation";
+import BotaoNavegacao from "../../components/BotaoNavegacao";
 import CardReservers from "../../components/CardReservers";
 import Header from "../../components/Header";
 import { theme } from "../../global/styles/theme";
@@ -20,7 +20,7 @@ const Reservers: React.FC = () => {
           <CardReservers />
         </ScrollView>
         <View style={styles.menu}>
-          <BottomNavigation colorEvent={theme.colors.purple_300} />
+          <BotaoNavegacao colorEvent={theme.colors.purple_300} />
         </View>
       </View>
     </View>

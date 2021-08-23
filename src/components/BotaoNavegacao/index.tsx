@@ -13,7 +13,7 @@ interface IProps {
   colorList?: any;
 }
 
-const BottomNavigation: React.FC<IProps> = ({
+const BotaoNavegacao: React.FC<IProps> = ({
   colorDash,
   colorEvent,
   colorList,
@@ -48,4 +48,4 @@ const BottomNavigation: React.FC<IProps> = ({
   );
 };
 
-export default BottomNavigation;
+export default BotaoNavegacao;

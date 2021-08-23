@@ -2,7 +2,7 @@ import React from "react";
 import { View, ScrollView, Image, TouchableOpacity, Text } from "react-native";
 
 import { theme } from "../../global/styles/theme";
-import BottomNavigation from "../../components/BottomNavigation";
+import BotaoNavegacao from "../../components/BotaoNavegacao";
 
 import EventImg from "../../assets/calendar.png";
 import Header from "../../components/Header";
@@ -26,7 +26,7 @@ const YourReservers: React.FC = () => {
           </TouchableOpacity>
         </ScrollView>
         <View style={styles.menu}>
-          <BottomNavigation colorList={theme.colors.purple_300} />
+          <BotaoNavegacao colorList={theme.colors.purple_300} />
         </View>
       </View>
     </View>
