@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, ScrollView, Image, TouchableOpacity, Text } from "react-native";
 
 import { theme } from "../../global/styles/theme";
-import BotaoNavegacao from "../../components/BotaoNavegacao";
 
+import BotaoNavegacao from "../../components/BotaoNavegacao";
 import EventImg from "../../assets/calendar.png";
 import Cabecalho from "../../components/Cabecalho";
+import ModalAlerta from "../../components/ModalAlerta";
+import ModalNovaReserva from "../../components/ModalNovaReserva";
 
 import { styles } from "./styles";
 
 const YourReservers: React.FC = () => {
+  const [modalVisivel, setModalVisivel] = useState(false);
+  const [modalAlerta, setModalAlerta] = useState(false);
+
+  const modalDeSalvar = () => {
+    setModalVisivel(false);
+    setModalAlerta(true);
+  };
+
   return (
     <View style={styles.container}>
       <Cabecalho icone="list" titulo="Suas Reservas" />
@@ -21,7 +31,10 @@ const YourReservers: React.FC = () => {
             Vamos cadastrar sua primeira {"\n"} reserva?
           </Text>
 
-          <TouchableOpacity style={styles.buttonAdd}>
+          <TouchableOpacity
+            style={styles.buttonAdd}
+            onPress={() => setModalVisivel(true)}
+          >
             <Text style={styles.buttonAddLabel}>Adicionar</Text>
           </TouchableOpacity>
         </ScrollView>
@@ -29,6 +42,14 @@ const YourReservers: React.FC = () => {
           <BotaoNavegacao corLista={theme.colors.purple_300} />
         </View>
       </View>
+
+      <ModalNovaReserva
+        modalVisivel={modalVisivel}
+        setModalVisivel={setModalVisivel}
+        salvar={modalDeSalvar}
+      />
+
+      <ModalAlerta modalAlerta={modalAlerta} setModalAlerta={setModalAlerta} />
     </View>
   );
 };
