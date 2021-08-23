@@ -4,8 +4,8 @@ import BotaoNavegacao from "../../components/BotaoNavegacao";
 import BotaoAdicionar from "../../components/BotaoAdicionar";
 import CardArea from "../../components/CardArea";
 import Header from "../../components/Header";
-import ModalAddNewArea from "../../components/ModalAddNewArea";
-import ModalAlert from "../../components/ModalAlert";
+import ModalAddNovaArea from "../../components/ModalAddNovaArea";
+import ModalAlerta from "../../components/ModalAlerta";
 import { theme } from "../../global/styles/theme";
 
 import { styles } from "./styles";
@@ -58,13 +58,13 @@ const Dashboard: React.FC = () => {
 
       <BotaoAdicionar onPress={() => setModalVisible(true)} />
 
-      <ModalAddNewArea
+      <ModalAddNovaArea
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}
         save={saveModal}
       />
 
-      <ModalAlert modalAlert={modalAlert} setModalAlert={setModalAlert} />
+      <ModalAlerta modalAlert={modalAlert} setModalAlert={setModalAlert} />
     </View>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { View, ScrollView } from "react-native";
 import BotaoNavegacao from "../../components/BotaoNavegacao";
-import CardReservers from "../../components/CardReservers";
+import CardReservas from "../../components/CardReservas";
 import Header from "../../components/Header";
 import { theme } from "../../global/styles/theme";
 
@@ -14,10 +14,10 @@ const Reservers: React.FC = () => {
 
       <View style={styles.content}>
         <ScrollView>
-          <CardReservers />
-          <CardReservers />
-          <CardReservers />
-          <CardReservers />
+          <CardReservas />
+          <CardReservas />
+          <CardReservas />
+          <CardReservas />
         </ScrollView>
         <View style={styles.menu}>
           <BotaoNavegacao colorEvent={theme.colors.purple_300} />

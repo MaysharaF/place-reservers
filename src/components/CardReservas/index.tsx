@@ -5,7 +5,7 @@ import { theme } from "../../global/styles/theme";
 
 import { styles } from "./styles";
 
-const CardReservers: React.FC = () => {
+const CardReservas: React.FC = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.nameArea}>Salão de Jogos</Text>
@@ -36,4 +36,4 @@ const CardReservers: React.FC = () => {
   );
 };
 
-export default CardReservers;
+export default CardReservas;

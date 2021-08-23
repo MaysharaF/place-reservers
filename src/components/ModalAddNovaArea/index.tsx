@@ -11,7 +11,7 @@ interface IProps {
   save: () => void;
 }
 
-const ModalAddNewArea: React.FC<IProps> = ({
+const ModalAddNovaArea: React.FC<IProps> = ({
   modalVisible,
   setModalVisible,
   save,
@@ -56,4 +56,4 @@ const ModalAddNewArea: React.FC<IProps> = ({
   );
 };
 
-export default ModalAddNewArea;
+export default ModalAddNovaArea;

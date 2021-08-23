@@ -13,7 +13,7 @@ interface IProps {
   setModalAlert: Dispatch<SetStateAction<boolean>>;
 }
 
-const ModalAlert: React.FC<IProps> = ({ modalAlert, setModalAlert }) => {
+const ModalAlerta: React.FC<IProps> = ({ modalAlert, setModalAlert }) => {
   return (
     <Modals modalVisible={modalAlert} setModalVisible={setModalAlert}>
       <View style={styles.container}>
@@ -24,4 +24,4 @@ const ModalAlert: React.FC<IProps> = ({ modalAlert, setModalAlert }) => {
   );
 };
 
-export default ModalAlert;
+export default ModalAlerta;
