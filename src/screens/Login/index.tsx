@@ -33,7 +33,7 @@ const Login: React.FC = () => {
     navigation.navigate("Signup");
   };
 
-  const loginFirebae = () => {
+  const loginFirebase = () => {
     firebase
       .auth()
       .signInWithEmailAndPassword(loginForm.email, loginForm.password)
@@ -89,7 +89,10 @@ const Login: React.FC = () => {
           </View>
 
           <View style={styles.footer}>
-            <ButtonAuth title="Entrar" onPress={loginFirebae} />
+            <ButtonAuth
+              title="Entrar"
+              onPress={() => navigation.navigate("Dashboard")}
+            />
 
             <Text>
               Sou um novo usuário.
@@ -101,12 +104,12 @@ const Login: React.FC = () => {
         </View>
       </View>
 
-      {errorLogin &&
+      {/* {errorLogin &&
         Alert.alert(
           "Oops!",
           "Usuário não encontrado! Verifique se seu e-mail e senha estão corretos.",
           [{ text: "OK", onPress: () => console.log("OK Pressed") }]
-        )}
+        )} */}
     </KeyboardAvoidingView>
   );
 };

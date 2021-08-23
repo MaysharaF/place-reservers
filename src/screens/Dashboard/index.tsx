@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { View, ScrollView } from "react-native";
+import { View, ScrollView, Text } from "react-native";
+import BottomNavigation from "../../components/BottomNavigation";
 import ButtonAdd from "../../components/ButtonAdd";
 import CardArea from "../../components/CardArea";
 import Header from "../../components/Header";
 import ModalAddNewArea from "../../components/ModalAddNewArea";
 import ModalAlert from "../../components/ModalAlert";
+import { theme } from "../../global/styles/theme";
 
 import { styles } from "./styles";
 
@@ -29,6 +31,9 @@ const Dashboard: React.FC = () => {
             quantity={10}
           />
         </ScrollView>
+        <View style={styles.menu}>
+          <BottomNavigation colorDash={theme.colors.purple_300} />
+        </View>
       </View>
 
       <ButtonAdd onPress={() => setModalVisible(true)} />

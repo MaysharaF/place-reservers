@@ -1,10 +1,14 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 
-// import { Container } from './styles';
+import { styles } from "./styles";
 
 const Reservers: React.FC = () => {
-  return <View />;
+  return (
+    <View style={styles.container}>
+      <Text>aa</Text>
+    </View>
+  );
 };
 
 export default Reservers;

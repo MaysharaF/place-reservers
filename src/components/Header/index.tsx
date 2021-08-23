@@ -9,8 +9,6 @@ import { styles } from "./styles";
 const Header: React.FC = () => {
   const navigation = useNavigation();
 
-  const handleLogout = () => {};
-
   const logout = () => {
     firebase
       .auth()
