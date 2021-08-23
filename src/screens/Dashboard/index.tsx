@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, ScrollView, Text } from "react-native";
 import BotaoNavegacao from "../../components/BotaoNavegacao";
-import ButtonAdd from "../../components/ButtonAdd";
+import BotaoAdicionar from "../../components/BotaoAdicionar";
 import CardArea from "../../components/CardArea";
 import Header from "../../components/Header";
 import ModalAddNewArea from "../../components/ModalAddNewArea";
@@ -56,7 +56,7 @@ const Dashboard: React.FC = () => {
         </View>
       </View>
 
-      <ButtonAdd onPress={() => setModalVisible(true)} />
+      <BotaoAdicionar onPress={() => setModalVisible(true)} />
 
       <ModalAddNewArea
         modalVisible={modalVisible}

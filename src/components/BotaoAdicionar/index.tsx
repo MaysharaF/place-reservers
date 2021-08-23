@@ -6,7 +6,7 @@ import { styles } from "./styles";
 
 type IProps = RectButtonProps & {};
 
-const ButtonAdd: React.FC<IProps> = ({ ...rest }) => {
+const BotaoAdicionar: React.FC<IProps> = ({ ...rest }) => {
   return (
     <RectButton style={styles.container} {...rest}>
       <Icon name="add" size={50} color="#fff" />
@@ -14,4 +14,4 @@ const ButtonAdd: React.FC<IProps> = ({ ...rest }) => {
   );
 };
 
-export default ButtonAdd;
+export default BotaoAdicionar;
