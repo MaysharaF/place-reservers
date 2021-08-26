@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { View, Image, Text, KeyboardAvoidingView } from "react-native";
+import {
+  View,
+  Image,
+  Text,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import firebase from "../../config/firebase";
 
@@ -46,7 +53,10 @@ const Cadastrar: React.FC = () => {
   };
 
   return (
-    <KeyboardAvoidingView style={styles.container}>
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+    >
       <View style={styles.imageContainer}>
         <Image source={AuthImg} style={styles.image} />
       </View>
