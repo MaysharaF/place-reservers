@@ -5,6 +5,7 @@ import {
   Image,
   KeyboardAvoidingView,
   Platform,
+  Alert,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import firebase from "../../config/firebase";
@@ -100,12 +101,12 @@ const Login: React.FC = () => {
         </View>
       </View>
 
-      {/* {errorLogin &&
+      {erroLogin &&
         Alert.alert(
           "Oops!",
           "Usuário não encontrado! Verifique se seu e-mail e senha estão corretos.",
           [{ text: "OK", onPress: () => console.log("OK Pressed") }]
-        )} */}
+        )}
     </KeyboardAvoidingView>
   );
 };

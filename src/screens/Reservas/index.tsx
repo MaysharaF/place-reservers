@@ -15,9 +15,6 @@ const Reservas: React.FC = () => {
       <View style={styles.content}>
         <ScrollView>
           <CardReservas />
-          <CardReservas />
-          <CardReservas />
-          <CardReservas />
         </ScrollView>
         <View style={styles.menu}>
           <BotaoNavegacao corEvento={theme.colors.purple_300} />
